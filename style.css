@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999;
+    stroke-dasharray: 1000px;
+    stroke-dashoffset: 1000px;
+}
+
+.animation{
+    animation: animation 10s ease-in-out both;
+}
+
+#circ{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60px;
+    width: 60px;
+    pointer-events: none;
+    z-index: 9999;
+    border: 1.5px solid #ffffff;
+    border-radius: 50%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+}
+
+#background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: url(https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+    background-position: center;
+    background-size: contain;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 500px;
+    font-weight: 800;
+    font-family: 'montserrat';
+}
+
+#whiteline{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%,-50%);
+    width: 52.1%;
+    height: 140px;
+    background-color: #ffffff;
+}
+
+#blackbox{
+    position: absolute;
+    top: 50%;
+    left: -4%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 250px;
+    background-color: #000;
+}
+
+#blackbox p{
+    color: #ffffff;
+    font-family: 'Playfair Display';
+    text-align: center;
+    font-size: 13px;
+    line-height: 22px;
+}
+
+#lineelem{
+    display: flex;
+    align-items: center;
+}
+
+#lineelem .line{
+   width: 140px;
+   height: 2px;
+   margin: 0 20px;
+   background-color: #000;
+}
+
+#lineelem h4{
+    font-family: 'Playfair Display';
+    font-size: 13px;
+}
+
+#lineelem i{
+    cursor: pointer;
+}
+
+#main>h5{
+    position: absolute;
+    top: 50%;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 16px;
+    transform: rotate(-90deg);
+    font-size: 8px;
+    font-family: 'Montserrat';
+}
+
+@keyframes animation{
+    to{
+        stroke-dasharray: 450px;
+    }
+}
